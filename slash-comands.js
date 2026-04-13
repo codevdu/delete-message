@@ -16,10 +16,13 @@ const comands = [
         ),
 
     new SlashCommandBuilder()
-        .setName("limpar")
-        .setDescription("Apaga todas as mensagens que tenham menos de 14 dias")
-].map(cmd => cmd.toJSON())
+        .setName("clear")
+        .setDescription("Apaga todas as mensagens que tenham menos de 14 dias"),
 
+    new SlashCommandBuilder()
+        .setName("nuke")
+        .setDescription("Clona e deleta o canal atual, apagando as mensagens e criando um novo canal idêntico, porém com id diferente.")
+].map(cmd => cmd.toJSON())
 
 const rest = new REST().setToken(process.env.accessToken)
 
