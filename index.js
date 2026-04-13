@@ -8,17 +8,6 @@ const client = new Client({
 client.on("interactionCreate", async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
-    if (interaction.commandName === "ping") {
-        await interaction.reply("Pong!")
-    }
-
-    if (interaction.commandName === "hola") {
-        const user = interaction.options.getUser("usuario")
-        await interaction.reply(`Hola, <@${user.id}>!`)
-    }
-
-    if (!interaction.isChatInputCommand()) return;
-
     const isAdm = process.env.adminRoleId;
 
     // clear command
@@ -109,7 +98,7 @@ client.on("interactionCreate", async interaction => {
         }
     }
 
-    
+
 })
 
 client.login(process.env.accessToken)

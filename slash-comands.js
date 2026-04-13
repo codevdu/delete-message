@@ -3,19 +3,6 @@ import 'dotenv/config.js'
 
 const comands = [
     new SlashCommandBuilder()
-        .setName("ping")
-        .setDescription("Responde com Pong"),
-
-    new SlashCommandBuilder()
-        .setName("hola")
-        .setDescription("Cumprimenta um usuário")
-        .addUserOption(option => option
-            .setName("usuario")
-            .setDescription("selecionar um usuário")
-            .setRequired(true)
-        ),
-
-    new SlashCommandBuilder()
         .setName("clear")
         .setDescription("Apaga todas as mensagens que tenham menos de 14 dias"),
 
