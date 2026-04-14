@@ -8,7 +8,7 @@ const comands = [
 
     new SlashCommandBuilder()
         .setName("nuke")
-        .setDescription("Clona e deleta o canal atual, apagando as mensagens e criando um novo canal idêntico, porém com id diferente.")
+        .setDescription("Clona o canal atual, apagando as mensagens e criando um novo canal idêntico")
 ].map(cmd => cmd.toJSON())
 
 const rest = new REST().setToken(process.env.accessToken)
